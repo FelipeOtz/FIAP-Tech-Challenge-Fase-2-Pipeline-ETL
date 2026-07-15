@@ -14,6 +14,7 @@ import json
 import logging
 import time
 from datetime import datetime, timezone
+from urllib.parse import unquote_plus
 
 import boto3
 
@@ -61,7 +62,7 @@ def lambda_handler(event, context):
     s3_client = boto3.client("s3")
 
     if event and "Records" in event:
-        chaves_pendentes = [registro["s3"]["object"]["key"] for registro in event["Records"]]
+        chaves_pendentes = [unquote_plus(registro["s3"]["object"]["key"]) for registro in event["Records"]]
     else:
         chaves_pendentes = listar_eventos_staging(s3_client)
 
