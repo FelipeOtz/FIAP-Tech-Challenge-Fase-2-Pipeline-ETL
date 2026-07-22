@@ -230,7 +230,7 @@ FIAP-Tech-Challenge-Fase-2-Pipeline-ETL/
 │   └── testar_upsert_streaming.py     # valida isoladamente o upsert de streaming da silver
 └── docs/
     ├── diagrama_arquitetura.png
-    ├── apresentacao_executiva.pptx     # slides usados na gravação do video executivo
+    ├── Pipeline-Dados-Alfabetizacao-Brasil.pptx  # slides usados na gravação do video executivo
     ├── link_video_executivo.txt        # link para o video executivo (YouTube)
     └── link_video_evidencia.txt        # link para o video mostrando a pipeline rodando no console AWS
 ```
